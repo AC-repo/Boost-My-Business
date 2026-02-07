@@ -5,10 +5,13 @@ import { Button } from '@/components/ui/button'
 
 export function Hero() {
   const handleSchedule = () => {
-    const pricingSection = document.getElementById('pricing')
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth' })
-    }
+    // Just scroll to the pricing section
+    setTimeout(() => {
+      const pricingSection = document.getElementById('pricing')
+      if (pricingSection) {
+        pricingSection.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
   }
 
   return (
@@ -22,9 +25,12 @@ export function Hero() {
         Profile together, step by step.
       </p>
 
-      <Button size="lg" onClick={handleSchedule}>
+      <button 
+        onClick={handleSchedule}
+        className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition font-medium"
+      >
         Schedule your session
-      </Button>
+      </button>
     </section>
   )
 }
