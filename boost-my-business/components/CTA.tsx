@@ -1,22 +1,23 @@
 // components/CTA.tsx
 'use client'
 
-import { Button } from '@/components/ui/button'
-import { ArrowRight } from 'lucide-react'
-
 export function CTA() {
   const handleBookNow = () => {
-    const pricingSection = document.getElementById('pricing')
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth' })
-    }
+    setTimeout(() => {
+      const pricingSection = document.getElementById('pricing')
+      if (pricingSection) {
+        pricingSection.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
   }
 
   const handleLearnMore = () => {
-    const featuresSection = document.getElementById('features')
-    if (featuresSection) {
-      featuresSection.scrollIntoView({ behavior: 'smooth' })
-    }
+    setTimeout(() => {
+      const featuresSection = document.getElementById('features')
+      if (featuresSection) {
+        featuresSection.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
   }
 
   return (
@@ -29,13 +30,18 @@ export function CTA() {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <Button size="lg" className="gap-2" onClick={handleBookNow}>
+        <button
+          onClick={handleBookNow}
+          className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition font-medium"
+        >
           Book Your Session
-          <ArrowRight className="h-4 w-4" />
-        </Button>
-        <Button size="lg" variant="outline" onClick={handleLearnMore}>
+        </button>
+        <button
+          onClick={handleLearnMore}
+          className="px-6 py-2 border border-black text-black rounded-lg hover:bg-gray-100 transition font-medium"
+        >
           Learn More
-        </Button>
+        </button>
       </div>
 
       <p className="text-sm text-muted-foreground">
