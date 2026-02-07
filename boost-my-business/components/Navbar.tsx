@@ -15,6 +15,14 @@ export function Navbar() {
     { label: 'Contact', href: '/contact' },
   ]
 
+  const handleBookNow = () => {
+    // Scroll to pricing section
+    const pricingSection = document.getElementById('pricing')
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <nav className="w-full border-b sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
       <div className="mx-auto max-w-5xl px-6 py-4">
@@ -35,7 +43,9 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Button size="sm">Book Now</Button>
+            <Button size="sm" onClick={handleBookNow}>
+              Book Now
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -60,7 +70,12 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Button className="w-full mt-4">Book Now</Button>
+            <Button className="w-full mt-4" onClick={() => {
+              setIsOpen(false)
+              handleBookNow()
+            }}>
+              Book Now
+            </Button>
           </div>
         )}
       </div>
