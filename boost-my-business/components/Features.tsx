@@ -3,11 +3,6 @@ import { Zap, Target, Users, TrendingUp, Shield, Clock } from 'lucide-react'
 
 const features = [
   {
-    title: 'Quick Turnaround',
-    description: 'Get results in just one 60-minute session',
-    icon: Clock,
-  },
-  {
     title: 'Boost Visibility',
     description: 'Appear higher in local Google search results',
     icon: Zap,
@@ -19,17 +14,22 @@ const features = [
   },
   {
     title: 'Build Trust',
-    description: 'Professional profile increases customer confidence',
+    description: 'A complete, verified profile helps customers feel confident',
     icon: Shield,
   },
   {
-    title: 'Grow Faster',
-    description: 'Leverage Google Business Profile for sustainable growth',
+    title: 'Quick Turnaround',
+    description: 'A focused 60-minute session to get things set up correctly',
+    icon: Clock,
+  },
+  {
+    title: 'Grow Sustainably',
+    description: 'Use your Google profile as your business continues to grow',
     icon: TrendingUp,
   },
   {
-    title: 'Personal Support',
-    description: 'Dedicated coaching tailored to your business needs',
+    title: 'Profile Coaching',
+    description: 'Learn how to confidently update your profile over time',
     icon: Users,
   },
 ]
@@ -38,9 +38,9 @@ export function Features() {
   return (
     <section id="features" className="space-y-12">
       <div className="space-y-3 text-center max-w-2xl mx-auto">
-        <h2 className="text-3xl font-bold">What You'll Get</h2>
+        <h2 className="text-3xl font-bold">What You’ll Get</h2>
         <p className="text-lg text-muted-foreground">
-          Complete support to optimize your business online
+          Clear guidance to help your business show up correctly on Google
         </p>
       </div>
 

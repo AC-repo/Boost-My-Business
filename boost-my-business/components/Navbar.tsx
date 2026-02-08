@@ -46,9 +46,9 @@ export function Navbar() {
       <div className="mx-auto max-w-5xl px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="font-semibold text-lg hover:text-black transition">
-            Boost My Business
-          </Link>
+          <Link href="/" className="font-bold text-2xl hover:text-accent transition">
+  Boost My Business
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

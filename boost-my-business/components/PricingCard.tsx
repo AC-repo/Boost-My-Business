@@ -35,7 +35,7 @@ export function PricingCard() {
             </li>
             <li className="flex items-start gap-3">
               <span className="text-black font-bold mt-0.5">✓</span>
-              <span className="text-sm">Google Business Profile setup or cleanup</span>
+              <span className="text-sm">Google Business Profile setup + cleanup</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-black font-bold mt-0.5">✓</span>
@@ -53,13 +53,12 @@ export function PricingCard() {
 
           <button
   onClick={() => window.open('https://calendly.com/boostmybusinesstoday/60min', '_blank')}
-  className="w-full px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition font-medium"
+  className="w-full px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-green-600 transition font-medium"
 >
   Schedule your session
 </button>
 
           <p className="text-xs text-center text-muted-foreground">
-            First consultation is complimentary • Cancel anytime
           </p>
         </Card>
       </div>

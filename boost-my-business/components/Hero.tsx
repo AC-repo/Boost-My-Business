@@ -4,33 +4,23 @@
 import { Button } from '@/components/ui/button'
 
 export function Hero() {
-  const handleSchedule = () => {
-    // Just scroll to the pricing section
-    setTimeout(() => {
-      const pricingSection = document.getElementById('pricing')
-      if (pricingSection) {
-        pricingSection.scrollIntoView({ behavior: 'smooth' })
-      }
-    }, 100)
-  }
-
   return (
-    <section id="hero" className="space-y-6 py-12">
-      <h1 className="text-4xl font-bold leading-tight">
+    <section id="hero" className="space-y-6 py-8">
+      <h1 className="text-5xl font-bold leading-tight">
         Book a 1-hour Google Business Profile setup session
       </h1>
 
       <p className="text-lg text-muted-foreground max-w-xl">
-        Live Zoom coaching where we set up or optimize your Google Business
+        Live Zoom coaching where we set up + optimize your Google Business
         Profile together, step by step.
       </p>
 
       <button 
-  onClick={() => window.open('https://calendly.com/boostmybusinesstoday/60min', '_blank')}
-  className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition font-medium text-lg"
->
-  Schedule your session
-</button>
+        onClick={() => window.open('https://calendly.com/boostmybusinesstoday/60min', '_blank')}
+        className="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-green-600 transition font-medium text-base"
+      >
+        Schedule your session
+      </button>
     </section>
   )
 }

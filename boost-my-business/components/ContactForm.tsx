@@ -24,9 +24,32 @@ export function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // For now, just show success - later you'll add email service here
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', phone: '', message: '' })
+      // Send email via EmailJS (free service)
+      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          service_id: 'gmail',
+          template_id: 'template_contact',
+          user_id: 'YOUR_EMAILJS_PUBLIC_KEY',
+          template_params: {
+            to_email: 'boostmybusinesstoday@gmail.com',
+            from_name: formData.name,
+            from_email: formData.email,
+            phone: formData.phone,
+            message: formData.message,
+          },
+        }),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', phone: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
     } catch (error) {
       console.error('Form submission error:', error)
       setSubmitStatus('error')

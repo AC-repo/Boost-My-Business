@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="mx-auto max-w-5xl px-6 py-20 space-y-24">
+      <main className="mx-auto max-w-5xl px-6 py-16 space-y-16">
         <Hero />
         <ValueProp />
         <Features />

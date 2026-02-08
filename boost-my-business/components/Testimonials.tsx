@@ -5,23 +5,23 @@ import { Star } from 'lucide-react'
 const testimonials = [
   {
     name: 'Sarah Anderson',
-    role: 'Small Business Owner',
+    role: 'Lash Technician Business Owner',
     content:
-      'This coaching session completely transformed how I present my business online. Within weeks, I saw a noticeable increase in customer inquiries.',
+      'My 1x1 coaching session really transformed how I present my business online. Within weeks, I saw a surge in customer inquiries.',
     rating: 5,
   },
   {
     name: 'Marcus Chen',
-    role: 'Restaurant Manager',
+    role: 'Plumbing + Electrical Business Owner',
     content:
-      'The guidance was clear and easy to follow. Our Google Business Profile now stands out, and we are getting more local customers than ever before.',
+      'The guidance was clear and easy to follow. Our Google Business Profile now stands out against the other plumbers in my area, and we are getting more customers than ever before!',
     rating: 5,
   },
   {
     name: 'Lisa Rodriguez',
-    role: 'Service-Based Business',
+    role: 'Party Planning Business Owner',
     content:
-      "The coaching was worth every penny. I learned optimization tricks I didn't know about, and my profile is now a lead-generating machine.",
+      "The coaching was worth every penny. I learned optimization tricks I didn't know about, and my profile is finally a lead-generating machine.",
     rating: 5,
   },
 ]
