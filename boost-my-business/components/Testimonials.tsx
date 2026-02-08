@@ -28,7 +28,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="space-y-12">
+    <section id="testimonials" className="space-y-12">
       <div className="space-y-3 text-center max-w-2xl mx-auto">
         <h2 className="text-3xl font-bold">What Our Clients Say</h2>
         <p className="text-lg text-muted-foreground">
@@ -41,7 +41,7 @@ export function Testimonials() {
           <Card key={testimonial.name} className="p-6 flex flex-col gap-4">
             <div className="flex gap-1">
               {Array.from({ length: testimonial.rating }).map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                <Star key={i} className="h-4 w-4 fill-black text-black" />
               ))}
             </div>
             <p className="text-sm text-muted-foreground flex-1 leading-relaxed">

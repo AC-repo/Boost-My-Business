@@ -36,7 +36,7 @@ const features = [
 
 export function Features() {
   return (
-    <section className="space-y-12">
+    <section id="features" className="space-y-12">
       <div className="space-y-3 text-center max-w-2xl mx-auto">
         <h2 className="text-3xl font-bold">What You'll Get</h2>
         <p className="text-lg text-muted-foreground">
@@ -48,10 +48,10 @@ export function Features() {
         {features.map((feature) => (
           <div
             key={feature.title}
-            className="p-6 rounded-lg border bg-card hover:border-accent/50 transition-colors"
+            className="p-6 rounded-lg border bg-card hover:border-black/50 transition-colors"
           >
-            <div className="h-10 w-10 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-              <feature.icon className="h-5 w-5 text-accent" />
+            <div className="h-10 w-10 rounded-lg bg-black/10 flex items-center justify-center mb-4">
+              <feature.icon className="h-5 w-5 text-black" />
             </div>
             <h3 className="font-semibold text-base mb-2">{feature.title}</h3>
             <p className="text-sm text-muted-foreground">{feature.description}</p>

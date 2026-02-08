@@ -3,18 +3,11 @@
 import { Button } from "@/components/ui/button"
 
 export function CTAButton() {
-  const handleClick = () => {
-    // Scroll to pricing section
-    setTimeout(() => {
-      const pricingSection = document.getElementById('pricing')
-      if (pricingSection) {
-        pricingSection.scrollIntoView({ behavior: 'smooth' })
-      }
-    }, 100)
-  }
-
   return (
-    <Button size="lg" onClick={handleClick}>
+    <Button 
+      size="lg" 
+      onClick={() => window.open('https://calendly.com/boostmybusinesstoday/60min', '_blank')}
+    >
       Schedule your session
     </Button>
   )

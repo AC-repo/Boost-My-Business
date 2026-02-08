@@ -2,8 +2,6 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 import { Card } from '@/components/ui/card'
 
 export function ContactForm() {
@@ -26,21 +24,7 @@ export function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // TODO: Replace with your actual API endpoint or email service
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData),
-      // })
-
-      // if (response.ok) {
-      //   setSubmitStatus('success')
-      //   setFormData({ name: '', email: '', phone: '', message: '' })
-      // } else {
-      //   setSubmitStatus('error')
-      // }
-
-      // For now, simulate success
+      // For now, just show success - later you'll add email service here
       setSubmitStatus('success')
       setFormData({ name: '', email: '', phone: '', message: '' })
     } catch (error) {
@@ -59,12 +43,14 @@ export function ContactForm() {
             <label htmlFor="name" className="text-sm font-medium">
               Your Name
             </label>
-            <Input
+            <input
               id="name"
               name="name"
+              type="text"
               placeholder="John Doe"
               value={formData.name}
               onChange={handleChange}
+              className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
               required
             />
           </div>
@@ -72,13 +58,14 @@ export function ContactForm() {
             <label htmlFor="email" className="text-sm font-medium">
               Email Address
             </label>
-            <Input
+            <input
               id="email"
               name="email"
               type="email"
               placeholder="you@example.com"
               value={formData.email}
               onChange={handleChange}
+              className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
               required
             />
           </div>
@@ -88,13 +75,14 @@ export function ContactForm() {
           <label htmlFor="phone" className="text-sm font-medium">
             Phone Number
           </label>
-          <Input
+          <input
             id="phone"
             name="phone"
             type="tel"
             placeholder="(555) 000-0000"
             value={formData.phone}
             onChange={handleChange}
+            className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
           />
         </div>
 
@@ -106,7 +94,7 @@ export function ContactForm() {
             id="message"
             name="message"
             placeholder="Tell us about your business and what you'd like help with..."
-            className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 min-h-32"
+            className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 min-h-32"
             value={formData.message}
             onChange={handleChange}
             required
@@ -125,9 +113,13 @@ export function ContactForm() {
           </div>
         )}
 
-        <Button type="submit" disabled={isSubmitting} className="w-full">
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 disabled:bg-gray-400 transition font-medium"
+        >
           {isSubmitting ? 'Sending...' : 'Send Message'}
-        </Button>
+        </button>
       </form>
     </Card>
   )

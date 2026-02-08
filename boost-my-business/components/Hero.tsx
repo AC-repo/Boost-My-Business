@@ -26,11 +26,11 @@ export function Hero() {
       </p>
 
       <button 
-        onClick={handleSchedule}
-        className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition font-medium"
-      >
-        Schedule your session
-      </button>
+  onClick={() => window.open('https://calendly.com/boostmybusinesstoday/60min', '_blank')}
+  className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition font-medium text-lg"
+>
+  Schedule your session
+</button>
     </section>
   )
 }
