@@ -1,0 +1,1 @@
+Boost My Business files to help small business owners navigate the process of claiming + amplifying their online Google Business storefronts so that the algorithm trusts and recommends their services to folks looking. 
